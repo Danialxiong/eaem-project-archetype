@@ -3,6 +3,8 @@
 .settings
 /target
 .DS_Store
+._*
+.codegraph/
 
 ### IntelliJ ###
 .idea/

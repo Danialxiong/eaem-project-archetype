@@ -1,5 +1,42 @@
 
-# AEM Project Archetype
+# EAEM Project Archetype
+
+Private AEM project archetype for repeatable client delivery projects. This repository is based on Adobe's official `aem-project-archetype`, with EAEM coordinates, local generation helpers, and a customization guide for default components, templates, policies, frontend framework, OSGi config, and Dispatcher baseline.
+
+See [EAEM_ARCHETYPE_GUIDE.md](EAEM_ARCHETYPE_GUIDE.md) for the customization map and recommended iteration path.
+
+## Quick Start
+
+Install the archetype locally:
+
+```bash
+mvn -DskipTests install
+```
+
+Generate a new client project:
+
+```bash
+./bin/generate-client-project.sh BMW /Users/ethan/work
+```
+
+Or call Maven directly:
+
+```bash
+mvn -B org.apache.maven.plugins:maven-archetype-plugin:3.3.1:generate \
+  -DarchetypeGroupId=com.ethan.aem \
+  -DarchetypeArtifactId=eaem-project-archetype \
+  -DarchetypeVersion=1.0.0-SNAPSHOT \
+  -DappTitle="BMW AEM" \
+  -DappId="bmw" \
+  -DgroupId="com.ethan.aem.bmw" \
+  -DartifactId="bmw-aem" \
+  -Dpackage="com.ethan.aem.bmw" \
+  -Dversion="0.0.1-SNAPSHOT" \
+  -DaemVersion="cloud" \
+  -DfrontendModule="general"
+```
+
+## Adobe Baseline Notes
 
 ![Test](https://github.com/adobe/aem-project-archetype/workflows/Test/badge.svg)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.adobe.aem/aem-project-archetype/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.adobe.aem/aem-project-archetype)

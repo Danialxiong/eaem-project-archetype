@@ -18,19 +18,19 @@
     <modelVersion>4.0.0</modelVersion>
 
 
-    <groupId>com.adobe.aem</groupId>
-    <artifactId>aem-project-archetype</artifactId>
-    <version>57-SNAPSHOT</version>
+    <groupId>com.ethan.aem</groupId>
+    <artifactId>eaem-project-archetype</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>maven-archetype</packaging>
 
-    <name>AEM Multi-Module Archetype</name>
-    <description>AEM multi-module archetype.</description>
-    <url>https://github.com/adobe/aem-project-archetype/</url>
+    <name>EAEM Project Archetype</name>
+    <description>Private AEM multi-module archetype for repeatable client project delivery.</description>
+    <url>https://github.com/Danialxiong/eaem-project-archetype/</url>
 
     <scm>
-        <connection>scm:git:https://github.com/adobe/aem-project-archetype.git</connection>
-        <developerConnection>scm:git:https://github.com/adobe/aem-project-archetype.git</developerConnection>
-        <url>https://github.com/adobe/aem-project-archetype/tree/master/</url>
+        <connection>scm:git:https://github.com/Danialxiong/eaem-project-archetype.git</connection>
+        <developerConnection>scm:git:https://github.com/Danialxiong/eaem-project-archetype.git</developerConnection>
+        <url>https://github.com/Danialxiong/eaem-project-archetype/tree/main/</url>
         <tag>HEAD</tag>
     </scm>
     <licenses>
@@ -42,8 +42,8 @@
     </licenses>
     <developers>
         <developer>
-            <name>Adobe Reference Squad</name>
-            <email>ref-squad@adobe.com</email>
+            <name>Ethan</name>
+            <email>ethan@example.com</email>
         </developer>
     </developers>
 
