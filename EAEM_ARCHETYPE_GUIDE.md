@@ -35,6 +35,12 @@ cd /Volumes/PSSD/project/eaem-project-archetype
 mvn -DskipTests install
 ```
 
+EAEM 默认只跑 `basic` archetype integration test。Adobe upstream 的 Angular/React IT 会安装老版本 Node/npm 依赖，在现代 macOS/Python 或外置盘空间不足时容易失败。需要全量验证时再显式执行：
+
+```bash
+mvn -P it-all install
+```
+
 之后就可以生成客户项目：
 
 ```bash

@@ -13,6 +13,12 @@ Install the archetype locally:
 mvn -DskipTests install
 ```
 
+By default, this private archetype runs only the basic archetype integration test during `install`. The upstream Angular/React integration fixtures are expensive and can fail on modern macOS/Python or low-disk external drives because they install old Node/npm dependency trees. Run the full upstream matrix only when you explicitly need it:
+
+```bash
+mvn -P it-all install
+```
+
 Generate a new client project:
 
 ```bash

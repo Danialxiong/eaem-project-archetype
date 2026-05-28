@@ -51,6 +51,7 @@
         <maven.archetype.version>3.3.1</maven.archetype.version>
         <groovy.version>4.0.22</groovy.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <archetype.test.projectsDirectory>${project.build.testOutputDirectory}/projects/basic</archetype.test.projectsDirectory>
     </properties>
 
     <build>
@@ -164,13 +165,21 @@
 
     <profiles>
         <!--
-            Profile for only executing the basic integration tests (without frontend modules,
-            because they increase the build time significantly)
+            Default EAEM build executes only the basic integration test. Frontend ITs are
+            intentionally opt-in because the upstream Angular/React test fixtures rely on
+            old Node/npm dependencies and are fragile on modern macOS/Python environments.
         -->
         <profile>
             <id>it-basic</id>
             <properties>
                 <archetype.test.projectsDirectory>${project.build.testOutputDirectory}/projects/basic</archetype.test.projectsDirectory>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>it-all</id>
+            <properties>
+                <archetype.test.projectsDirectory>${project.build.testOutputDirectory}/projects</archetype.test.projectsDirectory>
             </properties>
         </profile>
 
