@@ -21,15 +21,15 @@ if [ -z "$APP_ID" ] || [ -z "$PACKAGE_SEGMENT" ]; then
 fi
 
 APP_TITLE="${CLIENT_NAME} AEM"
-GROUP_ID="com.ethan.aem.${PACKAGE_SEGMENT}"
+GROUP_ID="com.${PACKAGE_SEGMENT}"
 ARTIFACT_ID="${APP_ID}-aem"
-PACKAGE_NAME="com.ethan.aem.${PACKAGE_SEGMENT}"
+PACKAGE_NAME="com.${PACKAGE_SEGMENT}"
 
 mkdir -p "$OUTPUT_DIR"
 cd "$OUTPUT_DIR"
 
 mvn -B org.apache.maven.plugins:maven-archetype-plugin:3.3.1:generate \
-  -DarchetypeGroupId=com.ethan.aem \
+  -DarchetypeGroupId=com.merkle.aem \
   -DarchetypeArtifactId=eaem-project-archetype \
   -DarchetypeVersion=1.0.0-SNAPSHOT \
   -DappTitle="$APP_TITLE" \

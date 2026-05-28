@@ -45,14 +45,14 @@ mvn -P it-all install
 
 ```bash
 mvn -B org.apache.maven.plugins:maven-archetype-plugin:3.3.1:generate \
-  -DarchetypeGroupId=com.ethan.aem \
+  -DarchetypeGroupId=com.merkle.aem \
   -DarchetypeArtifactId=eaem-project-archetype \
   -DarchetypeVersion=1.0.0-SNAPSHOT \
   -DappTitle="BMW AEM" \
   -DappId="bmw" \
-  -DgroupId="com.ethan.aem.bmw" \
+  -DgroupId="com.bmw" \
   -DartifactId="bmw-aem" \
-  -Dpackage="com.ethan.aem.bmw" \
+  -Dpackage="com.bmw" \
   -Dversion="0.0.1-SNAPSHOT" \
   -DaemVersion="cloud" \
   -DfrontendModule="general"

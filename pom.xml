@@ -18,7 +18,7 @@
     <modelVersion>4.0.0</modelVersion>
 
 
-    <groupId>com.ethan.aem</groupId>
+    <groupId>com.merkle.aem</groupId>
     <artifactId>eaem-project-archetype</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>maven-archetype</packaging>
